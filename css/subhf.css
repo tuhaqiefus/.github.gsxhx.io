@@ -1,0 +1,146 @@
+/* sub-header.css */
+
+.子页眉 {
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    width: 64vw;
+    height: 6vh;
+    background-color: #a6a5a7;
+    z-index: 900;
+    transition: width 0.3s ease;
+    margin-left: 17.55vw;
+}
+
+.子页眉.展开 {
+    width: 100vw;
+    margin-left: 0;
+    position: relative; /* 展开时改为 relative 以跟随文档流 */
+}
+
+.子页眉.固定 {
+    position: fixed;
+    top: 0;
+}
+
+/* 子页眉内部布局 */
+.子页眉内容 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 64vw;
+    margin: 0 auto;
+    position: relative;
+    z-index: 901;
+    transition: margin-left 0.3s ease;
+}
+
+.子页眉.展开 .子页眉内容 {
+    margin-left: calc(50% - 32vw - 0.378vw);
+}
+
+.子页眉背景填充 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #a6a5a7;
+    z-index: 900;
+    display: none;
+}
+
+.子页眉.展开 .子页眉背景填充 {
+    display: block;
+}
+
+.子页眉图片区域 {
+    width: 6vh;
+    height: 6vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.子页眉图片区域 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.子页眉标题区域 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.子页眉一级标题,
+.子页眉二级标题 {
+    width: 12vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    color: #fff;
+    font-size: 0.888vw;
+    font-weight: bold;
+    border-right: 1px solid #ccc;
+    position: relative;
+}
+
+.子页眉一级标题箭头,
+.子页眉二级标题下拉箭头 {
+    position: absolute;
+    right: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0d0124;
+    font-size: 1vh;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.子页眉一级标题箭头.展开,
+.子页眉二级标题下拉箭头.展开 {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.子页眉一级标题下拉菜单,
+.子页眉二级标题下拉菜单 {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 12vw;
+    background-color: #a6a5a7;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 1000;
+}
+
+.子页眉一级标题下拉菜单.显示,
+.子页眉二级标题下拉菜单.显示 {
+    display: block;
+}
+
+.子页眉一级标题下拉菜单项,
+.子页眉二级标题下拉菜单项 {
+    padding: 1vh 1vw;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.2s;
+}
+
+.子页眉一级标题下拉菜单项:hover,
+.子页眉二级标题下拉菜单项:hover {
+    background-color: #8a898b;
+}
+
+.子页眉一级标题下拉菜单项:last-child,
+.子页眉二级标题下拉菜单项:last-child {
+    border-bottom: none;
+}

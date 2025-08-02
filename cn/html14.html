@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组织架构</title> 
+    <link rel="stylesheet" href="../cn/css/gshf.css">
+    <link rel="stylesheet" href="../cn/css/subhf.css">
+    <link rel="stylesheet" href="../cn/css/media.css">
+    <style>
+        .地图容器 {
+            width: calc(100% - 9vw);
+            height: 40vh;
+            position: relative;
+            top: 5vh;
+            left: 4.5vw;
+            right: 4.5vw;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .地图容器3 {
+            width: calc(100% - 9vw);
+            height: 50vh;
+            position: absolute;
+            top: 145vh; /* 第二个地图容器是85vh，加上50vh高度，再加10vh间距 */
+            left: 4.5vw;
+            right: 4.5vw;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .history图片{
+            /* 居中显示 */
+            margin: 15vh auto;
+            /* 移除绝对定位，使用相对定位 */
+            position: relative;
+            /* 设置宽度，可以根据需要调整 */
+            width: 50vw;
+            /* 设置最大宽度，防止在大屏幕上过宽 */
+            /*max-width: 50vw;*/
+            /* 设置最小宽度，防止在小屏幕上过窄 */
+            /*min-width: 300px;*/
+            /* 设置高度，可以根据需要调整 */
+            height: auto;
+            /* 移除背景色，让图片更自然 */
+            background-color: transparent;
+            /* 使用flex布局居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 添加一些内边距 */
+            padding: 0px;
+                        /********************     宝句             ******************/
+                        overflow: hidden;
+        }
+
+        /* 图片样式 */
+        .history图片 img {
+            /* 图片自适应容器大小 */
+            width: 100%;
+            height: auto;
+            /* 保持图片比例 */
+            object-fit: contain;
+            /* 添加圆角效果 */
+            /*border-radius: 8px;*/
+            /* 添加阴影效果 */
+            /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+
+            /********************     宝句             ******************/
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main class="统一主体内容块一级块">
+                <div class="主体顶上标题">
+                    <h1>h1</h1> 
+                    <img src="../assets\images\css/css1.jpg" class="主体顶上标题图片">
+                </div>
+
+                <div class="history图片">
+                    <img src="../cn/assets/images/xhxorg.jpg" alt="his">
+                </div>
+
+          
+  </main>
+
+    <script src="../cn/js/gshf.js"></script>
+    <script src="../cn/js/subhf.js"></script>
+</body>
+</html>

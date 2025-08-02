@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>员工活动</title> 
+    <link rel="stylesheet" href="../cn/css/gshf.css">
+    <link rel="stylesheet" href="../cn/css/subhf.css">
+    <link rel="stylesheet" href="../cn/css/media.css">
+    <style>
+
+.统一主体内容块一级块 {
+            padding: 0 0vw;
+        }
+
+        .活动展示主体 {
+        display: flex;
+        flex-direction: column;
+        background-color: #f4f4f4;
+        flex-grow: 1;
+    }
+
+    .活动展示主体-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        /*padding: 40px 50px;*/
+        background-color: #e0e0e0;
+        flex-grow: 1;
+    }
+
+    .活动展示主体-top h1 {
+        font-size: 3em;
+        color: #333;
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    .活动展示主体-top .top-image {
+        width: 200px;
+        height: auto;
+        margin-left: 30px;
+    }
+
+    .活动展示主体-bottom {
+        background-color: #ffffff;
+        flex-grow: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .活动展示主体-bottom .centered-image {
+        max-width: 100%;
+        max-height: 100vh;
+        height: auto;
+        display: block;
+    }
+
+    .第一等级块 {
+        width: 64vw;
+        height: 120vh;
+
+        /*margin: 0 10vw;不这样就会左对齐，右边空着好多，好奇怪*/
+
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        background-color: #b8b4b4;
+    }
+
+    .第一等级块-bottom {
+        width: 60vw;
+        height: 5vh;
+        margin: 0;
+        background: white;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .bottom-right-image {
+        max-width: 100%;
+        max-height: 100%;
+        height: 5vh;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .二二等级块-top {
+        height: 4000vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .二二等级块-bottom {
+        height: 80vh;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0;
+        box-sizing: border-box;
+    }
+
+    .仨仨仨等级块 {
+        width: 29vw;
+        min-width: 150px;
+        background-color: white;
+        height: auto;
+        padding: 10px 0px;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 5px;
+        color: #fff;
+    }
+
+    .仨仨仨等级块 h3 {
+        margin: 5vh 0 2.2vh 0;
+        font-size: 2em;
+        color: #0a0909;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+
+
+    }
+
+    .仨仨仨等级块 p {
+        font-size: 1.2em;
+        color: #7c7a7a;
+        flex-grow: 1;
+        flex-grow: 1;
+        margin: 0;
+        
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        text-align: left;
+        text-indent: 2em;
+        font-family: "SimSun", "宋体", serif;
+        padding-left: 1em;
+        padding-right: 1em;
+
+    }
+
+    .仨仨仨等级块 img {
+        max-width: 99%;
+        height: auto;
+        margin-top: 15px;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-slide {
+        display: flex;
+        width: 500%;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide img {
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .carousel-button.prev {
+        left: 10px;
+    }
+
+    .carousel-button.next {
+        right: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .活动展示主体 {
+            margin-top: 0;
+            min-height: auto;
+        }
+
+        .活动展示主体-top {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .活动展示主体-top h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .活动展示主体-top .top-image {
+            margin-left: 0;
+        }
+
+        .第一等级块 {
+            width: 95%;
+            margin: 0;
+            height: auto;
+        }
+
+        .二二等级块-top {
+            height: 30vh;
+        }
+
+        .二二等级块-bottom {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .仨仨仨等级块 {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 1px;
+            min-width: unset;
+        }
+
+        .第一等级块-bottom {
+            width: 95%;
+            height: 4vh;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+    <main class="统一主体内容块一级块">
+                <div class="主体顶上标题">
+                    <h1>h1</h1> 
+                    <img src="../assets\images\css/css7.jpg" class="主体顶上标题图片">
+                </div>
+                <div class="活动展示主体">
+                    <div class="第一等级块">
+                        <div class="二二等级块-top">
+                            <div class="carousel-container">
+                                <div class="carousel-slide">
+                                    <img src="assets\images\career\b1.jpg" alt="Carousel Image 1">
+                                    <img src="assets\images\career\b2.jpg" alt="Carousel Image 2">
+                                    <img src="assets\images\career\b3.jpg" alt="Carousel Image 3">
+                                    <img src="assets\images\career\b4.jpg" alt="Carousel Image 4">
+                                    <img src="assets\images\career\b5.jpg" alt="Carousel Image 5">
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="二二等级块-bottom">
+                            <div class="仨仨仨等级块">
+                                <h3>薪酬福利</h3>
+                                <p> <br> </p>
+                                <p>公司的薪酬福利体系极具竞争力，旨在嘉奖员工的辛勤付出。除了优厚的月薪，还提供全面的健康保险、丰厚的年终奖金以及完善的退休金计划，确保员工和家人的生活无忧，为您提供坚实的后盾。</p>
+                                <img src="assets\images\career\Samsung_301.jpg" alt="Placeholder Image 1">
+                            </div>
+            
+                            <div class="仨仨仨等级块">
+                                <h3>办公环境</h3>
+                                <p> <br> </p>
+                                <p> 公司致力于打造一个开放、舒适且充满活力的现代化办公空间。在这里，员工将享受到人体工学座椅、高速网络和充足的自然光。此外还设有休闲区和健身设施，在高效工作的同时保持身心健康。</p>
+                                <img src="assets\images\career\workplace_302.jpg" alt="Placeholder Image 2">
+                            </div>
+            
+                            <div class="仨仨仨等级块">
+                                <h3>团体活动</h3>
+                                <p> <br> </p>
+                                <p> 加入公司，体验丰富多彩的团建活动！从激动人心的户外拓展到轻松愉快的节日派对，公司定期组织各类活动，旨在增进团队凝聚力，帮助您结识志同道合的同事，共同创造难忘的回忆。</p>
+                                <img src="assets\images\career\girls_303.jpg" alt="Placeholder Image 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="第一等级块-bottom">
+                    <a href="html7to3.html" target="_blank">
+                        <img src="assets/images/career/2foot.jpg" alt="photos.json" class="bottom-right-image">
+                    </a>
+                </div>
+            
+
+          
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const adjustContentMargin = () => {
+            const mainHeader = document.getElementById('mainHeader');
+            const mainContent = document.querySelector('.活动展示主体');
+            if (mainHeader && mainContent && window.innerWidth > 768) {
+                const headerHeight = mainHeader.offsetHeight;
+                mainContent.style.marginTop = `${headerHeight}px`;
+            } else if (mainContent && window.innerWidth <= 768) {
+                mainContent.style.marginTop = '0';
+            }
+        };
+    
+        setTimeout(adjustContentMargin, 50);
+        window.addEventListener('resize', adjustContentMargin);
+    
+        let currentSlide = 0;
+        const slides = document.querySelector('.carousel-slide');
+        const totalSlides = slides.children.length;
+        let slideInterval;
+    
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
+        }
+    
+        function startAutoPlay() {
+            slideInterval = setInterval(() => {
+                moveSlide(1);
+            }, 3000);
+        }
+    
+        function stopAutoPlay() {
+            clearInterval(slideInterval);
+        }
+    
+        startAutoPlay();
+    
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+        carouselContainer.addEventListener('mouseleave', startAutoPlay);
+    });
+        </script>
+    <script src="../cn/js/gshf.js"></script>
+    <script src="../cn/js/subhf7.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>总部地址</title> 
+    <link rel="stylesheet" href="../cn/css/gshf.css">
+    <link rel="stylesheet" href="../cn/css/subhf.css">
+    <link rel="stylesheet" href="../cn/css/media.css">
+    <style>
+        .地图容器 {
+            width: calc(100% - 9vw);
+            height: 50vh;
+            position: absolute;
+            top: 25vh;
+            left: 4.5vw;
+            right: 4.5vw;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .地图容器标题 {
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .地图容器标题::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 007%;
+            height: 2px;
+            background-color: #fc8f00;
+        }
+
+        .地图容器标题 h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.1vw;
+            color: #333;
+        }
+
+        .地图容器内容 {
+            height: 40vh;
+            display: flex;
+            gap: 1vw;
+        }
+
+        .地图容器左列 {
+            width: 27vw;
+            height: 100%;
+        }
+
+        .地图容器右列 {
+            width: 27vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .地图容器表格 {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2vh;
+        }
+
+        .地图容器表格 th,
+        .地图容器表格 td {
+            border: 1px solid #ddd;
+            padding: 1vh 1vw;
+            text-align: left;
+            font-size: 0.9vw;
+        }
+
+        .地图容器表格 th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+            border-top: 1px solid #ddd;
+        }
+
+        .地图容器表格 tr:first-child th {
+            border-top: 3px solid #333;
+        }
+        .地图容器表格 tr:first-child td {
+            border-top: 3px solid #333;
+        }
+
+        /* 第二个地图容器样式 */
+        .地图容器2 {
+            width: calc(100% - 9vw);
+            height: 50vh;
+            position: absolute;
+            top: 85vh; /* 第一个地图容器是25vh，加上50vh高度，再加10vh间距 */
+            left: 4.5vw;
+            right: 4.5vw;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 第三个地图容器样式 */
+        .地图容器3 {
+            width: calc(100% - 9vw);
+            height: 50vh;
+            position: absolute;
+            top: 145vh; /* 第二个地图容器是85vh，加上50vh高度，再加10vh间距 */
+            left: 4.5vw;
+            right: 4.5vw;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <main class="统一主体内容块一级块">
+        <div class="主体顶上标题">
+            <h1>h1</h1> 
+            <img src="../assets\images\css/css1.jpg" class="主体顶上标题图片">
+        </div>
+        
+        <div class="地图容器">
+            <div class="地图容器标题">
+                <h2>上海办公地</h2>
+            </div>
+            <div class="地图容器内容">
+                <div class="地图容器左列">
+                    
+                    <!--iframe src="https://surl.amap.com/5AcNuWx1e0nC" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe-->
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23813.307287726384!2d121.26273199770036!3d31.018203534411708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b28ca7a0fe63a9%3A0xc0a7583663c50f28!2z5Lit5Zu95LiK5rW35biC5p2-5rGf5Yy65Y2O5Yqg6LevOTnlj7czMCDpgq7mlL_nvJbnoIE6IDIwMTY5OQ!5e0!3m2!1szh-CN!2sus!4v1753674198162!5m2!1szh-CN!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="地图容器右列">
+                    <table class="地图容器表格">
+                        <tr>
+                            <th>地址</th>
+                            <td>上海市松江区华加路99号联东U谷30幢</td>
+                        </tr>
+                        <tr>
+                            <th>邮编</th>
+                            <td>201600</td>
+                        </tr>
+                        <tr>
+                            <th>电话</th>
+                            <td>86-21-6767-0912</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- 第二个地图容器示例 -->
+        <div class="地图容器2">
+            <div class="地图容器标题">
+                <h2>西安办公地</h2>
+            </div>
+            <div class="地图容器内容">
+                <div class="地图容器左列">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6596.476271083365!2d108.9410219521431!3d34.24246668391772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36637a7f567c21a7%3A0x73ad216fe68730dd!2z5Lit6LS45bm_5Zy6!5e0!3m2!1szh-CN!2sus!4v1753674372546!5m2!1szh-CN!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="地图容器右列">
+                    <table class="地图容器表格">
+                        <tr>
+                            <th>地址</th>
+                            <td>陕西省西安市碑林区中贸广场15号楼2单元2108室</td>
+                        </tr>
+                        <tr>
+                            <th>邮编</th>
+                            <td>710000</td>
+                        </tr>
+                        <tr>
+                            <th>电话</th>
+                            <td>86-29-8787-6559</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        
+        <!--div class="主体地图">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23813.307287726384!2d121.26273199770036!3d31.018203534411708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b28ca7a0fe63a9%3A0xc0a7583663c50f28!2z5Lit5Zu95LiK5rW35biC5p2-5rGf5Yy65Y2O5Yqg6LevOTnlj7czMCDpgq7mlL_nvJbnoIE6IDIwMTY5OQ!5e0!3m2!1szh-CN!2sus!4v1753674198162!5m2!1szh-CN!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6596.476271083365!2d108.9410219521431!3d34.24246668391772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36637a7f567c21a7%3A0x73ad216fe68730dd!2z5Lit6LS45bm_5Zy6!5e0!3m2!1szh-CN!2sus!4v1753674372546!5m2!1szh-CN!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20730.833385148944!2d121.26283190180597!3d31.017536396328698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b28ca7a0fe63a9%3A0x653e495ed7d29193!2s%E8%81%94%20%E4%B8%9C%2C%2099%20Huajia%20Rd%2C%20Song%20Jiang%20Qu%2C%20Shang%20Hai%20Shi%2C%20China%2C%20201699!5e0!3m2!1sen!2sus!4v1753674706160!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15154.475767262347!2d108.92935565745907!3d34.2438350408798!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36637a7f567c21a7%3A0x73ad216fe68730dd!2sZhongmao%20Plaza!5e0!3m2!1sen!2sus!4v1753674765802!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27353.065639340686!2d121.26429102170411!3d31.0225381940882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b28ca7a0fe63a9%3A0x653e495ed7d29193!2z6IGUIOS4nCwgOTkgSHVhIEppYSBMdSwgU29uZyBKaWFuZyBRdSwgU2hhbmcgSGFpIFNoaSwg7KSR6rWtIDIwMTY5OQ!5e0!3m2!1sko!2sus!4v1753677901694!5m2!1sko!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26385.4761522429!2d108.9293557!3d34.243835!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36637a7f567c21a7%3A0x73ad216fe68730dd!2sZhongmao%20Plaza!5e0!3m2!1sko!2sus!4v1753677844805!5m2!1sko!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+</div-->
+  </main>
+
+    <script src="../cn/js/gshf.js"></script>
+    <script src="../cn/js/subhf.js"></script>
+</body>
+</html>

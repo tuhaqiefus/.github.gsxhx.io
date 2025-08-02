@@ -1,0 +1,460 @@
+/* headerfooter.css */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef1f1;
+    overflow-x: hidden;
+}
+
+.主页眉 {
+    position: relative;
+    left: 0;
+    width: 100vw;
+    height: 8.8vh;
+    background-color: #FFFFFF;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-bottom 0.3s ease-out;
+    top: 0vh; /* 从原始值调整为 0vh */
+}
+
+.footerp {
+    font-size: 0.01em;
+    margin-bottom: 0;
+}
+
+.页眉内容,
+.下拉弹窗内容 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    border: none;
+    margin-left: 17.5vw;
+}
+
+.页眉列,
+.下拉弹窗列 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 100%;
+    position: relative;
+    border-right: none; /* 默认无边框 */
+    border-left: none; /* 默认无边框 */
+}
+
+/* Logo列样式 */
+.页眉列.logo,
+.下拉弹窗列.logo {
+    flex: 0 0 14vw;
+    max-width: 14vw;
+    min-width: 14vw;
+    justify-content: flex-start;
+}
+
+/* 下拉弹窗logo列的左侧边线 */
+.下拉弹窗列.logo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-out;
+}
+
+.主页眉.有边线 .下拉弹窗列.logo::before {
+    background-color: #000000;
+}
+
+/* 页眉logo列的左侧边线 */
+.页眉列.logo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-out;
+}
+
+.主页眉.有边线 .页眉列.logo::before {
+    background-color: #f0e8e8;
+}
+
+.页眉列.btn,
+.下拉弹窗列.btn {
+    flex: 0 0 10vw;
+    max-width: 10vw;
+    min-width: 10vw;
+    flex-direction: column;
+}
+
+.页眉列.btn:last-child {
+    border-right: none;
+}
+
+/* 下拉弹窗列特殊样式 */
+.下拉弹窗列.btn {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.页眉Logo {
+    height: 6vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.页眉按钮,
+.下拉弹窗按钮 {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    height: 2.5vw;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+    border-radius: 0;
+    transition: color 0.2s;
+}
+
+.页眉按钮:hover,
+.下拉弹窗按钮:hover {
+    color: #fff;
+}
+
+.下拉弹窗按钮:hover,
+.下拉弹窗子按钮:hover {
+    background-color: #e68200;
+    color: #fff;
+}
+
+/* 下拉弹窗子按钮样式 */
+.下拉弹窗子按钮 {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 1.05em;
+    padding: 0;
+    margin: 0.0vh 0;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.下拉弹窗子按钮:hover {
+    color: #fc8f00;
+}
+
+.下拉弹窗列.btn:hover,
+.下拉弹窗列.btn:focus-within {
+    background-color: transparent;
+}
+
+.下拉弹窗列.btn:hover .下拉弹窗按钮,
+.下拉弹窗列.btn:hover .下拉弹窗子按钮 {
+    color: #fc8f00;
+}
+
+.页眉列.btn:hover {
+    background-color: #FFA500;
+}
+
+.页眉列.btn:hover .页眉按钮 {
+    color: #fff;
+}
+
+.页眉列.btn.active,
+.下拉弹窗列.btn.active {
+    background-color: #fc8f00 !important;
+}
+
+.页眉列.btn.active .页眉按钮,
+.下拉弹窗列.btn.active .下拉弹窗按钮,
+.下拉弹窗列.btn.active .下拉弹窗子按钮 {
+    color: #fff !important;
+}
+
+.页眉下拉弹窗 {
+    position: absolute;
+    top: 8.8vh;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    z-index: 999;
+    transition: height 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+}
+
+/***************************下拉弹窗的高度！！！！！！！！*****/
+.页眉下拉弹窗.展开 {
+    height: 28vh;
+}
+
+.下拉弹窗Logo区域 {
+    width: 8vw;
+    height: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.下拉弹窗Logo区域 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.下拉弹窗Logo区域 img.显示 {
+    opacity: 1;
+}
+
+.统一主体内容块一级块 {
+    width: 64vw;
+    margin: 12.5vh auto 0 auto;
+    /*为了集团新闻0.1.5.1*/
+    /*padding: 0 1vw 5vh 1vw;*/
+    /* 减少底部内边距，为固定页脚留出空间 */
+    padding: 0 5vw 5vh 5vw; 
+
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 150vh;/* 100vh时，内部的元素会超出页面，导致页脚被戳穿 */
+    max-height: 300vh;/* 无效 */
+    position: relative;
+    margin-bottom:1vh; /* 为主体内容添加底部边距，避免被页脚遮挡 */
+}
+
+.主体顶上标题 {
+    width: 60vw;
+    height: 7vw;
+    margin: 2.5vw auto 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #67706b;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.主体顶上标题图片 {
+    width: 5vw;
+    height: 5vw;
+    object-fit: cover;
+}
+
+
+.页脚 {
+    width: 100vw;
+    background-color: white;
+    color: #a7a1a1;
+    padding: 1vw 0;
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.页脚内容 {
+    width: 64vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.页脚左侧 {
+    width: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.页脚Logo {
+    width: 5vw;
+    height: auto;
+    object-fit: contain;
+}
+
+.页脚中间 {
+    width: 50vw;
+    text-align: center;
+}
+
+.页脚右侧 {
+    width: 7vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.页脚site按钮 {
+    background-color: transparent;
+    border: 1px solid #a7a1a1;
+    color: #a7a1a1;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+    font-size: 0.8vw;
+    transition: all 0.3s ease;
+}
+
+.页脚site按钮:hover {
+    background-color: #a7a1a1;
+    color: white;
+}
+
+.页脚导航菜单 {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 65vw;
+    /*测绘结果约30.1vh*/
+    height: 25.1vh;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    display: none;
+    z-index: 1000;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    margin: 0vh auto 2.1vh auto;
+}
+
+.页脚导航菜单.显示 {
+    display: flex;
+}
+
+.页脚导航列 {
+    flex: 1;
+    padding: 0 1vw;
+    text-align: left;
+}
+
+.页脚导航标题 {
+    color: #333;
+    font-size: 1vw;
+    font-weight: bold;
+    margin-bottom: 1vh;
+    padding-bottom: 0.5vh;
+    border-bottom: 1px solid #ddd;
+}
+
+.页脚导航按钮 {
+    color: #666;
+    font-size: 0.8vw;
+    padding: 0.3vh 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    display: block;
+    text-decoration: none;
+}
+
+.页脚导航按钮:hover {
+    color: #333;
+}
+
+/* 展开时的边框 */
+.页眉列.有边线,
+.下拉弹窗列.有边线 {
+    border-right: 1px solid #f0e8e8;
+}
+
+.页眉列:last-child.有边线,
+.下拉弹窗列:last-child.有边线 {
+    border-right: 1px solid #f0e8e8;
+}
+
+.页眉列.logo.左边线,
+.下拉弹窗列.logo.左边线 {
+    border-left: 1px solid #f0e8e8;
+}
+
+/* 顶部语言栏 */
+.语言栏 {
+    position: relative;
+    left: 0;
+    width: 100vw;
+    height: 3vh;
+    background: #fff;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: none;
+    border-bottom: 1px solid #f0e8e8;
+}
+
+.语言栏按钮组 {
+    display: flex;
+    gap: 2.2vw;
+    margin-right: 22vw;
+}
+
+.语言栏按钮 {
+    background: none;
+    border: none;
+    color: #68b7b9;
+    font-size: 0.5vw;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+}
+
+.语言栏按钮:hover {
+    color: #fc8f00;
+}
+
+.下拉弹窗按钮,
+.下拉弹窗子按钮:first-child {
+    margin-top: 3vh;
+}
+
+.下拉弹窗按钮::before,
+.下拉弹窗子按钮::before {
+    content: "\00a0\00a0\00a0";
+}
+
+.下拉弹窗按钮,
+.下拉弹窗子按钮 {
+    line-height: 2;
+}
