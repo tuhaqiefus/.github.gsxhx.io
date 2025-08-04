@@ -13,7 +13,7 @@ function injectSubHeader() {
                 </div>
                 <div class="子页眉标题区域">
                     <div class="子页眉一级标题">
-                        可持续性
+                        科技研发
                         <span class="子页眉一级标题箭头" id="子页眉一级标题箭头">▼</span>
                         <div class="子页眉一级标题下拉菜单" id="子页眉一级标题下拉菜单">
                             <a class="子页眉一级标题下拉菜单项" href="../cn/html11.html" target="_blank">公司介绍</a>
