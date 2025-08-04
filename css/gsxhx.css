@@ -159,7 +159,7 @@
 
     .页眉倒影下拉弹窗内容 {
         width: 100%;
-        height: 30vh;
+        /*height: 30vh;*/
         display: flex;
         align-items: center;
         justify-content: center;
